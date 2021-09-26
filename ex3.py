@@ -1,34 +1,7 @@
-letters="python"
+# 파이썬 문자열
+# 021 ~030
+# 021 문자열 인덱싱
+# letters가 바인딩하는 문자열에서 첫번재와 세번째 문자를 출력하세요.
+letters = 'python'
 print(letters[0],letters[2])
-
-license_plate="24가 2210"
-print(license_plate[-4:])
-
-string="홀짝홀짝홀짝"
-print(string[::2])
-
-string="PYTHON"
-print(string[::-1])
-
-phone_number ="010-1111-2222"
-phone_number1=phone_number.replace("-"," ")
-print(phone_number1)
-
-phone_number1=phone_number.replace("-","")
-print(phone_number1)
-
-url="http://sharebook.kr"
-url_split=url.split('.')
-print(url_split[-1])
-
-lang='python'
-#lang[0]='p'
-print(lang)
-
-string='abcdefghijklmn'
-string=string.replace('a','A')
-print(string)
-
-string='abcd'
-string.replace('b',"B")
-print(string)
+#파이썬 문자열에서 한 글자를 가져오는 것을 인덱싱이라고 부릅니다. 파이썬 인덱싱은 0부터 시작합니다.
