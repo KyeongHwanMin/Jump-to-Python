@@ -1,5 +1,5 @@
 # 파이썬 문자열
-# 021 ~030
+# 021 ~050
 # 021 문자열 인덱싱
 # letters가 바인딩하는 문자열에서 첫번재와 세번째 문자를 출력하세요.
 letters = 'python'
@@ -68,3 +68,101 @@ string = 'abcd'
 string.replace('b','B')
 print(string)
 #문자열은 수정할 수 없습니다.
+
+#031 문자열 합치기
+a = "3"
+b = "4"
+print(a+b)
+#032 문자열 곱하기
+print("Hi"*3)
+#033 문자열 곱하기
+# 화면에 '-'를 80개 출력하세요.
+print('-'*80)
+
+# 034 문자열 곱하기
+# 변수에 다음과 같은 문자열이 바인딩 되어 있습니다.
+t1 = 'python'
+t2 = 'java'
+# python java python java python java python java 출력
+print((t1+' '+t2+' ') *4)
+
+# 035 문자열 출력
+# %fromatting 을 사용
+name1 = "김민수"
+age1 = 10
+name2 = "이철희"
+age = 10
+print("이름 : %s 나이 : %d" %(name1, age1))
+
+# 036 문자열 출력
+# 문자열의 format() 메서드를 사용해서 35번 문제 풀기
+print(format("이름: {} 나이 : {}".format(name1,age1)))
+#037 문자열 출력
+# f-string 사용
+print(f"이름: {name2} 나이: {age}")
+#f-string은 문자열 앞에 f가 붙은 형태입니다.
+# f-string을 사용하면 {변수}와 같은 형태로
+# 문자열 사이에 타입과 상관없이 값을 출력할 수 있습니다.
+
+# 038 컴마 제거하기
+# 컴마를 제거한 후 정수 타입으로 변환
+상장주식수 = "5,969,782,550"
+# 상장주식수=상장주식수.replace(",",'')
+# 상장주식수 = int(상장주식수)
+# print(상장주식수,type(상장주식수))
+#
+# #039 문자열 슬라이싱
+# # '2020/03'만 출력하기
+# 분기 = "2020/03(E) (IFRS연결)"
+# print(분기[0:7])
+#
+# #040 strip 메서드
+# # 문자열의 좌우 공백 제거
+# data = "  삼성전자   "
+# print(data)
+# print(data.strip())
+#
+# # 041 upper 메서드
+# 대문자 BTC_KRW로 변경
+ticker = "btc_krw"
+print(ticker.upper())
+
+# 042 lower 메서드
+ticker = "BTC_KRW"
+print(ticker.lower())
+
+# 043 capitalize 메서드
+a = 'hello'
+print(a.capitalize())
+
+# 044 endswith 메서드
+#파일 이름이 문자열로 저장되어 있을 때
+# endswith 메서드를 사용해서 파일 이름이 'xlsx'로 끝나는지 확인해보세요.
+file_name = "보고서.xls"
+print(file_name.endswith("xlsx"))
+
+# 045 endswith 메[서드
+print(file_name.endswith(("xlsx", "xls")))
+
+# 046 startswith 메서드
+file_name = "2020_보고서.xlsx"
+print(file_name.startswith("2020"))
+
+# 047 split 메서드
+a = "hello world"
+print(a.split())
+
+# 048 split 메서드
+ticker = "btc_krw"
+print(ticker.split('_'))
+
+# 049 split 메서드
+date = "2020-05-01"
+print(date.split('-'))
+
+# 050 rstrip 메서드
+date = "03940         "
+date.rstrip("03940         ")
+print(date)
+date1 = "        03940"
+print(date1.lstrip())
