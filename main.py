@@ -150,4 +150,43 @@ print(1 in a)
 # 집합에 관련된 것들을 쉽게 처리하기 위해 만들어진 자료형
 # 중복을 허용하지 않는다.
 # 순서가 없다
+s1 = set([1,2,3])
+s1 = {1,2,3}
+print(type(s1))
 
+s1 = set([1,2,3,4,5,6])
+s2 = set([4,5,6,7,8,9])
+# 자바로 하면 이중 for문 돌려야함.
+print(s1 & s2) #s1과 s2의 교집합
+print(s1.intersection(s2)) #s1과 s2의 교집합
+print(s1 | s2) # 합 집합
+print(s1.union(s2))
+print(s1-s2) # 차 집합
+s1.add(10)
+print(s1)
+s1.update([11,12,13,1])
+print(s1)
+s1.remove(1)
+print(s1)
+
+# 불 boolean  (문자열,리스트 등)값이 있으면 참, 없으면 거짓
+a = True
+print(type(a))
+a = "안녕"
+if a:
+    print(a)
+a = [1,2,3,4]
+while a:
+    a.pop() # 마지막 요소 없애고 출력
+    print(a)
+############# 변수
+# a = 3
+# 3이라는 값을 가지는 정수 자료형(객체)이 자동으로 메모리에 생성
+# 변수 a는 객체가 저장된 메모리의 위치를 가리키는 레퍼런스(Reference)
+# a라는 변수는 3이라는 정수형 객체를 가리키고 있다.
+# https://pythontutor.com/live.html#mode=edit
+a = [1,2,3]
+b=a
+a[1] = 4
+print(a)
+print(b)
