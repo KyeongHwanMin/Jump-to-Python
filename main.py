@@ -225,4 +225,56 @@ print(a)
 print(b)
 
 ################# 5강 (3장)제어문 ##############
+# 조건문 , python == 들여 쓰기!
+money = True
+if money:
+    print("택시승차")
+else:
+    print("걷기")
 
+a = 1
+b = 2
+if a < b:
+    print("참")
+else:
+    print("거짓")
+
+pocket = ['paper','cellphone']
+card = True
+if 'money' in pocket:
+    pass
+elif card:
+    print("택시")
+else:
+    print("걷기")
+# 조건부 표현식 (삼항연산자)
+score = 80
+massage = "sucess" if score >= 60 else "failure"
+print(massage)
+
+#while 문
+treeHit = 0
+while treeHit < 10:
+    treeHit = treeHit +1
+    print("나무를 %d번 찍었다." % treeHit)
+    if treeHit == 10:
+        print("나무가 넘어감")
+# break
+coffee = 10
+money = 300
+while money:
+    print("돈을 받았으니 커피를 줍니다.")
+    coffee = coffee -1
+    print("남은 커피의 양은 %d 입니다."% coffee)
+    if not coffee:
+        print("커피가 다 떨어졌습니다.")
+        break
+# continue
+a=0
+while a < 10:
+    a=a+1
+    if a % 2 == 0:
+        continue
+    print(a)
+
+# for 문
