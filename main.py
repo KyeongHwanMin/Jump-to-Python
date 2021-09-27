@@ -142,29 +142,29 @@ for k, v in a.items():
 # print(a.items())
 print(a.get(1))
 print(a.get(4))  # None 출력 # print(a[4]) == 에러
-print(a.get(4,'없음'))
-print(4 in a)# 키 찾기
+print(a.get(4, '없음'))
+print(4 in a)  # 키 찾기
 print(1 in a)
 
 # 집합
 # 집합에 관련된 것들을 쉽게 처리하기 위해 만들어진 자료형
 # 중복을 허용하지 않는다.
 # 순서가 없다
-s1 = set([1,2,3])
-s1 = {1,2,3}
+s1 = set([1, 2, 3])
+s1 = {1, 2, 3}
 print(type(s1))
 
-s1 = set([1,2,3,4,5,6])
-s2 = set([4,5,6,7,8,9])
+s1 = set([1, 2, 3, 4, 5, 6])
+s2 = set([4, 5, 6, 7, 8, 9])
 # 자바로 하면 이중 for문 돌려야함.
-print(s1 & s2) #s1과 s2의 교집합
-print(s1.intersection(s2)) #s1과 s2의 교집합
-print(s1 | s2) # 합 집합
+print(s1 & s2)  # s1과 s2의 교집합
+print(s1.intersection(s2))  # s1과 s2의 교집합
+print(s1 | s2)  # 합 집합
 print(s1.union(s2))
-print(s1-s2) # 차 집합
+print(s1 - s2)  # 차 집합
 s1.add(10)
 print(s1)
-s1.update([11,12,13,1])
+s1.update([11, 12, 13, 1])
 print(s1)
 s1.remove(1)
 print(s1)
@@ -175,9 +175,9 @@ print(type(a))
 a = "안녕"
 if a:
     print(a)
-a = [1,2,3,4]
+a = [1, 2, 3, 4]
 while a:
-    a.pop() # 마지막 요소 없애고 출력
+    a.pop()  # 마지막 요소 없애고 출력
     print(a)
 ############# 변수
 # a = 3
@@ -185,8 +185,41 @@ while a:
 # 변수 a는 객체가 저장된 메모리의 위치를 가리키는 레퍼런스(Reference)
 # a라는 변수는 3이라는 정수형 객체를 가리키고 있다.
 # https://pythontutor.com/live.html#mode=edit
-a = [1,2,3]
-b=a
+a = [1, 2, 3]
+b = a
 a[1] = 4
+print(id(a))  # id == 주소 값
+print(id(b))
+print(a is b)  # 같은 주소를 같는지 확인
+
+a = [1, 2, 3]
+b = a[:]  # a의 값을 슬라이싱(주소x)
+a[1] = 4
+print(a)
+print(b)
+print(id(a))  # id == 주소 값
+print(id(b))
+
+from copy import copy  # 값을 복사
+
+a = [1, 2, 3]
+b = copy(a)
+a[1] = 4
+print(a)
+print(b)
+print(id(a))  # id == 주소 값
+print(id(b))
+# 튜플을 이용한 변수 값 할당
+a, b = ('python', 'life')
+(a, b) = 'python', 'life'
+# 리스트를 이용한 변수 값 할당
+[a, b] = ['python', 'life']
+a = b = 'hello'
+print(a)
+print(b)
+# 값 바꿔서 넣기
+a = 3
+b = 5
+a,b = b,a
 print(a)
 print(b)
