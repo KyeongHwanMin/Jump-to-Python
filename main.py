@@ -106,4 +106,47 @@ print(a)
 # 튜플 b=(1,2,3) 튜플 변경불가능 (길이,값 고정)
 
 t1 = (1, 2, 'a', 'b')
+t2 = (3, 4)
 print(t1[0:2])
+print(t1 + t2)
+t2 = t2 * 3
+print(t2)
+
+# 딕셔너리(사전)
+# ex)Json(API)
+# 연관 배열 또는 해시
+# Key를 통해 Value를 얻는다.
+
+dic = {'name': 'Eric', 'age': 15}
+print(dic['name'])
+
+a = {1: 'a'}
+a['name'] = "익명"  # 딕셔너리 추가하기
+print(a)
+
+del a[1]  # 키 값으로 삭제
+print(a)
+
+a = {1: 'a', 1: 'b'}  # 마지막 값이 나옴
+print(a)
+
+a = {1: '파랑구름', 2: '이현준', 3: "민경환"}
+print(a.keys())
+print(a.values())
+print(a.items())
+
+for k, v in a.items():
+    print("키는 : " + str(k))
+    print("벨류는 :" + v)
+# a.clear()
+# print(a.items())
+print(a.get(1))
+print(a.get(4))  # None 출력 # print(a[4]) == 에러
+print(a.get(4,'없음'))
+print(4 in a)# 키 찾기
+print(1 in a)
+
+# 집합
+# 집합에 관련된 것들을 쉽게 처리하기 위해 만들어진 자료형
+# 중복을 허용하지 않는다.
+# 순서가 없다
