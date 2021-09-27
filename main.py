@@ -96,6 +96,14 @@ a.insert(1, 500)
 print(a)
 a.remove(3)
 print(a)
-print(a.pop()) # 마지막 값 빼내기
-a.extend([6,7])
+print(a.pop())  # 마지막 값 빼내기
+a.extend([6, 7])
 print(a)
+
+# 4강 자료형2
+# 리스트 , 튜플
+# a = [1,2,3] a=[8,2,3] 리스트 변경가능
+# 튜플 b=(1,2,3) 튜플 변경불가능 (길이,값 고정)
+
+t1 = (1, 2, 'a', 'b')
+print(t1[0:2])
