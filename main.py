@@ -309,3 +309,16 @@ for i in range(2,10):
     for j in range(1,10):
         print(i*j, end=" ") # 붙여서 출력
     print('')
+# 리스트 내포
+#result = [num *3 for num in a if num % 2 ==0]
+#result =[]
+#for num in a:
+#    if num%2 ==0:
+#        result.append(num*3)
+# 이중 포문
+#result = [x*y for x in range(2,10) for y in range(1,10)]
+
+# result = []
+# for x in range(2,10):
+#     for y in range(1,10):
+#         result.append(x*y)
