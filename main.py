@@ -225,4 +225,100 @@ print(a)
 print(b)
 
 ################# 5강 (3장)제어문 ##############
+# 조건문 , python == 들여 쓰기!
+money = True
+if money:
+    print("택시승차")
+else:
+    print("걷기")
 
+a = 1
+b = 2
+if a < b:
+    print("참")
+else:
+    print("거짓")
+
+pocket = ['paper','cellphone']
+card = True
+if 'money' in pocket:
+    pass
+elif card:
+    print("택시")
+else:
+    print("걷기")
+# 조건부 표현식 (삼항연산자)
+score = 80
+massage = "sucess" if score >= 60 else "failure"
+print(massage)
+
+#while 문
+treeHit = 0
+while treeHit < 10:
+    treeHit = treeHit +1
+    print("나무를 %d번 찍었다." % treeHit)
+    if treeHit == 10:
+        print("나무가 넘어감")
+# break
+coffee = 10
+money = 300
+while money:
+    print("돈을 받았으니 커피를 줍니다.")
+    coffee = coffee -1
+    print("남은 커피의 양은 %d 입니다."% coffee)
+    if not coffee:
+        print("커피가 다 떨어졌습니다.")
+        break
+# continue
+a=0
+while a < 10:
+    a=a+1
+    if a % 2 == 0:
+        continue
+    print(a)
+
+# for 문 (자바의 향상된 for문)
+# for 변수 in 리스트(튜플,문자열)
+#   수행할 문장
+test_list = ['one', 'two' , 'three']
+for i in test_list:
+    print(i)
+a = [(1,2), (3,4), (5,6)]
+for(first, last) in a:
+    print(first + last)
+    print(first)
+
+marks = [90, 25, 67, 45, 80]
+number = 0
+for mark in marks:
+    number = number + 1
+    if mark >= 60:
+        print("%d번 학생은 합격"% number)
+    else:
+        print("%d번 학생은 불합격"% number)
+
+# range
+sum = 0
+for i in range(1, 11): # 1~10
+    sum = sum + i
+    print(i)
+print(sum)
+
+# 구구단
+for i in range(2,10):
+    for j in range(1,10):
+        print(i*j, end=" ") # 붙여서 출력
+    print('')
+# 리스트 내포
+#result = [num *3 for num in a if num % 2 ==0]
+#result =[]
+#for num in a:
+#    if num%2 ==0:
+#        result.append(num*3)
+# 이중 포문
+#result = [x*y for x in range(2,10) for y in range(1,10)]
+
+# result = []
+# for x in range(2,10):
+#     for y in range(1,10):
+#         result.append(x*y)
