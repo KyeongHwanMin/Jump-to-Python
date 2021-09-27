@@ -277,4 +277,35 @@ while a < 10:
         continue
     print(a)
 
-# for 문
+# for 문 (자바의 향상된 for문)
+# for 변수 in 리스트(튜플,문자열)
+#   수행할 문장
+test_list = ['one', 'two' , 'three']
+for i in test_list:
+    print(i)
+a = [(1,2), (3,4), (5,6)]
+for(first, last) in a:
+    print(first + last)
+    print(first)
+
+marks = [90, 25, 67, 45, 80]
+number = 0
+for mark in marks:
+    number = number + 1
+    if mark >= 60:
+        print("%d번 학생은 합격"% number)
+    else:
+        print("%d번 학생은 불합격"% number)
+
+# range
+sum = 0
+for i in range(1, 11): # 1~10
+    sum = sum + i
+    print(i)
+print(sum)
+
+# 구구단
+for i in range(2,10):
+    for j in range(1,10):
+        print(i*j, end=" ") # 붙여서 출력
+    print('')
