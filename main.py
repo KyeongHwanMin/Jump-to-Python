@@ -220,7 +220,7 @@ print(b)
 # 값 바꿔서 넣기
 a = 3
 b = 5
-a,b = b,a
+a, b = b, a
 print(a)
 print(b)
 
@@ -239,7 +239,7 @@ if a < b:
 else:
     print("거짓")
 
-pocket = ['paper','cellphone']
+pocket = ['paper', 'cellphone']
 card = True
 if 'money' in pocket:
     pass
@@ -252,10 +252,10 @@ score = 80
 massage = "sucess" if score >= 60 else "failure"
 print(massage)
 
-#while 문
+# while 문
 treeHit = 0
 while treeHit < 10:
-    treeHit = treeHit +1
+    treeHit = treeHit + 1
     print("나무를 %d번 찍었다." % treeHit)
     if treeHit == 10:
         print("나무가 넘어감")
@@ -264,15 +264,15 @@ coffee = 10
 money = 300
 while money:
     print("돈을 받았으니 커피를 줍니다.")
-    coffee = coffee -1
-    print("남은 커피의 양은 %d 입니다."% coffee)
+    coffee = coffee - 1
+    print("남은 커피의 양은 %d 입니다." % coffee)
     if not coffee:
         print("커피가 다 떨어졌습니다.")
         break
 # continue
-a=0
+a = 0
 while a < 10:
-    a=a+1
+    a = a + 1
     if a % 2 == 0:
         continue
     print(a)
@@ -280,11 +280,11 @@ while a < 10:
 # for 문 (자바의 향상된 for문)
 # for 변수 in 리스트(튜플,문자열)
 #   수행할 문장
-test_list = ['one', 'two' , 'three']
+test_list = ['one', 'two', 'three']
 for i in test_list:
     print(i)
-a = [(1,2), (3,4), (5,6)]
-for(first, last) in a:
+a = [(1, 2), (3, 4), (5, 6)]
+for (first, last) in a:
     print(first + last)
     print(first)
 
@@ -293,32 +293,182 @@ number = 0
 for mark in marks:
     number = number + 1
     if mark >= 60:
-        print("%d번 학생은 합격"% number)
+        print("%d번 학생은 합격" % number)
     else:
-        print("%d번 학생은 불합격"% number)
+        print("%d번 학생은 불합격" % number)
 
 # range
 sum = 0
-for i in range(1, 11): # 1~10
+for i in range(1, 11):  # 1~10
     sum = sum + i
     print(i)
 print(sum)
 
 # 구구단
-for i in range(2,10):
-    for j in range(1,10):
-        print(i*j, end=" ") # 붙여서 출력
+for i in range(2, 10):
+    for j in range(1, 10):
+        print(i * j, end=" ")  # 붙여서 출력
     print('')
+
+
 # 리스트 내포
-#result = [num *3 for num in a if num % 2 ==0]
-#result =[]
-#for num in a:
+# result = [num *3 for num in a if num % 2 ==0]
+# result =[]
+# for num in a:
 #    if num%2 ==0:
 #        result.append(num*3)
 # 이중 포문
-#result = [x*y for x in range(2,10) for y in range(1,10)]
+# result = [x*y for x in range(2,10) for y in range(1,10)]
 
 # result = []
 # for x in range(2,10):
 #     for y in range(1,10):
 #         result.append(x*y)
+
+############### 4장 함수 ####################
+# def 함수명(매개변수)
+#     <수행할 문장1>
+#     <수행할 문장2>
+#     ...
+#     return 리턴 값
+def sum(a, b):
+    result = a + b
+    return result
+print(1+3)
+
+def say():
+    return 'H1'
+print(say())
+
+def sum(a,b) :
+    print("%d, %d의 합은 %d입니다."%(a,b,a+b))
+print(sum(1,2))
+
+myList = [1,2,3]
+print(myList.append(4)) # 리턴값이 없음.
+print(myList.pop()) # 리턴값이 있음.
+
+#입력도 출력도 없는 함수
+def say():
+    print('HI')
+print(say())
+
+def sum_many(*args): # *변수(여러개 값이 들어감) == (a,b,c,d,...)
+    sum = 0
+    for i in args:
+        sum=sum+i
+    return sum
+print(sum_many(1,2,3))
+
+def print_kwargs(**kwargs): # keyword arguments 딕셔녀리
+    for k in kwargs.keys():
+        if(k == "name"):
+            print("당신의 이름은:" +k)
+print(print_kwargs(name="1", b="2"))
+
+#함수의 결과 값은 언제나 하나이다.
+def sum_and_mul(a,b):
+    return a+b, a*b  #튜플형태
+
+print(sum_and_mul(1,2)[0])
+print(sum_and_mul(1,2)[1])
+
+#매개변수에 초기값 미리 설정하기
+def say_myself(name,old,man=True):  # 초기값은 맨 마지막에 써줘야함.
+    print("나의 이름은 %s 입니다." % name)
+    print("나이는 %d살 입니다." % old)
+    if man:
+        print("남자입니다.")
+    else:
+        print("여자 입니다.")
+say_myself("민경환",20)
+say_myself("민경환",20,False)
+
+#함수 안에서 선언된 변수의 효력 범위
+a = 1 # 전역 변수
+def vartest(a):
+    a=a+1 # 지역변수
+vartest(a)
+print(a)
+#함수 안에서 함수 밖의 변수를 변경하는 방법1
+a = 1
+def vartest(a):
+    a=a+1
+    return a
+a=vartest(a)
+print(a)
+#함수 안에서 함수 밖의 변수를 변경하는 방법2
+a = 1 #전역 변수
+def vartest():
+    global a #전역 변수
+    a=a+1
+vartest()
+print(a)
+
+#Lambda
+#def add(a,b):
+#   return a+b
+add = lambda a, b: a+b
+print(add(1,2))
+myList = [lambda a, b: a+b, lambda a, b: a*b]
+print(myList[0](1,2))
+
+# 사용자 입력과 출력
+# a = input()
+# print(a)
+#
+# number = input("숫자를 입력하시오.")
+# print(number)
+print("life" "is" "too short")
+print("life", "is", "too short")
+for i in range(10):
+    print(i,end=' ') #end를 뒤에 붙인다.
+
+#파일 읽고 쓰기
+# f = open("새파일.txt",'w') # r-읽기모드, w-쓰기모드, a-추가모드(파일의 마지막에 새로운 내용 추가)
+# f.close()
+#
+# f = open("새파일.txt","w",encoding="UTF-8")
+# for i in range(1,11):
+#     data = "%d번째 줄입니다. \n" % i
+#     f.write(data)
+# f.close()
+
+#readline()함수
+# f=open("새파일.txt",'r',encoding="UTF-8")
+# line = f.readline()
+# print(line)
+# f.close()
+
+# f=open("새파일.txt",'r')
+# while True:
+#     line = f.readline() # 한줄씩 불러옴
+#     if not line: break
+#     print(line)
+# f.close()
+
+#readlines()
+# f=open("새파일.txt",'r')
+# lines = f.readlines() # 파일에 있는 모든 라인을 불러온다. 리스트형식
+# for line in lines:
+#     print(line)
+# f.close()
+
+#readline()
+# f=open("새파일.txt",'r')
+# data = f.read() #통째로 불러옴.
+# print(data)
+# f.close()
+
+# 'w'== write는 지우고 새로운 글써짐. 'a'== 이어서 글 작성.
+# f=open("새파일.txt",'a',encoding="UTF-8")
+# for i in range(11,20):
+#     data = "%d번째 줄 입니다. \n" %i
+#     f.write(data)
+# f.close()
+
+# with문 사용하기  == close 필요x
+# with open('foo.txt','w') as f:  # f에 저장 (지역변수)
+#     f.write("life")
+
+
