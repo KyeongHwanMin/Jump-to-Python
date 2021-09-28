@@ -106,12 +106,35 @@ print("5")
 # else:
 #     print("땡")
 #120 아래와 같이 fruit 딕셔너리가 정의되어 있다. 사용자가 입력한 값이 딕셔너리 값 (value)에 포함되었다면 "정답입니다"를 아닐 경우 "오답입니다" 출력하라.
-fruit = {"봄" : "딸기", "여름" : "토마토", "가을" : "사과"}
-user = input("좋아하는 과일은? :")
-if user in fruit.values():
-    print("정답")
-else:
-    print("오답")
+# fruit = {"봄" : "딸기", "여름" : "토마토", "가을" : "사과"}
+# user = input("좋아하는 과일은? :")
+# if user in fruit.values():
+#     print("정답")
+# else:
+#     print("오답")
+
+#121 사용자로부터 문자 한 개를 입력 받고, 소문자일 경우 대문자로, 대문자 일 경우, 소문자로 변경해서 출력하라.
+# user = input("문자 입력 :")
+# if user.islower():
+#     print(user.upper())
+# else:
+#     print(user.lower())
+# 122 점수 구간에 해당하는 학점이 아래와 같이 정의되어 있다. 사용자로부터 score를 입력받아 학점을 출력하라.
+# score = input("score: ")
+# score = int(score)
+# if 81 <= score <= 100:
+#     print("grade is A")
+# elif 61 <= score <= 80:
+#     print("grade is B")
+# elif 41 <= score <= 60:
+#     print("grade is C")
+# elif 21 <= score <= 40:
+#     print("grade is D")
+# else:
+#     print("grade is E")
+
+#123 사용자로부터 달러, 엔, 유로, 또는 위안 금액을 입력받은 후 이를 원으로 변환하는 프로그램을 작성하라. 각 통화별 환율은 다음과 같다. 사용자는 100 달러, 1000 엔, 13 유로, 100 위안과 같이 금액과 통화명 사이에 공백을 넣어 입력한다고 가정한다.
+user = input("입력 : ")
 
 
 
