@@ -125,3 +125,46 @@ for 변수 in 리스트:
 for 변수 in 리스트 :
     if 변수.split(".")[1] == 'c' or 변수.split(".")[1] == 'h' :
         print(변수)
+#161 for문과 range 구문을 사용해서 0~99까지 한 라인에 하나씩 순차적으로 출력하는 프로그램을 작성하라.
+for a in range(100) :
+    print(a)
+#162  range()를 사용하여 2002~2050년까지 중 월드컵이 개최되는 연도를 출력하라.
+for a in range(2002,2051,4):
+    print(a)
+#163 1부터 30까지의 숫자 중 3의 배수를 출력하라.
+for a in range(3,31,3):
+    print(a)
+#164  99부터 0까지 1씩 감소하는 숫자들을, 한 라인에 하나씩 출력하라.
+for a in range(100):
+    print(99-a)
+#165
+for a in range(10):
+    print(a/10)
+#166 구구단 3단출력
+for a in range(1,10):
+    print(f"3 x {a} = {3*a}")
+#167 3단, 홀 수번째만 출력
+for a in range(1,10,2):
+    print(f"3 x {a}={3*a}")
+#168 1~10까지의 숫자에 대해 모두 더한 값을 출력하는 프로그램을 for 문을 사용하여 작성하라
+b=0
+for a in range(1,11):
+    b=b+a
+print("합 : ",b)
+#169 ~10까지의 숫자 중 모든 홀수의 합을 출력하는 프로그램을 for 문을 사용하여 작성하라.
+b=0
+for a in range(1,10):
+    if a%2==1:
+        b+=a
+        print("합 : ",b)
+b=0
+for a in range(1,10,2):
+        b+=a
+print("합 : ",b)
+#170 1~10까지의 숫자를 모두 곱한 값을 출력하는 프로그램을 for 문을 사용하여 작성하라.
+b=1
+for a in range(1,11):
+    b*=a
+print("곱",b)
+
+
