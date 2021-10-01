@@ -321,64 +321,64 @@ import random
 
 import random
 
-class Account:
-    # class variable
-    account_count = 0
-
-    def __init__(self, name, balance):
-        self.name = name
-        self.balance = balance
-        self.bank = "SC은행"
-
-        num1 = random.randint(0, 999)
-        num2 = random.randint(0, 99)
-        num3 = random.randint(0, 999999)
-
-        num1 = str(num1).zfill(3)      # 1 -> '1' -> '001'
-        num2 = str(num2).zfill(2)      # 1 -> '1' -> '01'
-        num3 = str(num3).zfill(6)      # 1 -> '1' -> '0000001'
-        self.account_number = num1 + '-' + num2 + '-' + num3  # 001-01-000001
-
-        Account.account_count += 1
-
-
-kim = Account("김민수", 100)
-print(Account.account_count)
-lee = Account("이민수", 100)
-print(Account.account_count)
-
-# 클래스 변수 출력
-# Account 클래스로부터 생성된 계좌의 개수를 출력하는 get_account_num() 메서드를 추가하세
-import random
-
-class Account:
-    # class variable
-    account_count = 0
-
-    def __init__(self, name, balance):
-        self.name = name
-        self.balance = balance
-        self.bank = "SC은행"
-
-        # 3-2-6
-        num1 = random.randint(0, 999)
-        num2 = random.randint(0, 99)
-        num3 = random.randint(0, 999999)
-
-        num1 = str(num1).zfill(3)      # 1 -> '1' -> '001'
-        num2 = str(num2).zfill(2)      # 1 -> '1' -> '01'
-        num3 = str(num3).zfill(6)      # 1 -> '1' -> '0000001'
-        self.account_number = num1 + '-' + num2 + '-' + num3  # 001-01-000001
-        Account.account_count +=1
-
-    @classmethod
-    def get_account_num(cls):
-        print(cls.account_count)     # Account.account_count
-
-
-kim = Account("김민수", 100)
-lee = Account("이민수", 100)
-kim.get_account_num() # Account.get_account_num(kim)
+# class Account:
+#     # class variable
+#     account_count = 0
+#
+#     def __init__(self, name, balance):
+#         self.name = name
+#         self.balance = balance
+#         self.bank = "SC은행"
+#
+#         num1 = random.randint(0, 999)
+#         num2 = random.randint(0, 99)
+#         num3 = random.randint(0, 999999)
+#
+#         num1 = str(num1).zfill(3)      # 1 -> '1' -> '001'
+#         num2 = str(num2).zfill(2)      # 1 -> '1' -> '01'
+#         num3 = str(num3).zfill(6)      # 1 -> '1' -> '0000001'
+#         self.account_number = num1 + '-' + num2 + '-' + num3  # 001-01-000001
+#
+#         Account.account_count += 1
+#
+#
+# kim = Account("김민수", 100)
+# print(Account.account_count)
+# lee = Account("이민수", 100)
+# print(Account.account_count)
+#
+# # 클래스 변수 출력
+# # Account 클래스로부터 생성된 계좌의 개수를 출력하는 get_account_num() 메서드를 추가하세
+# import random
+#
+# class Account:
+#     # class variable
+#     account_count = 0
+#
+#     def __init__(self, name, balance):
+#         self.name = name
+#         self.balance = balance
+#         self.bank = "SC은행"
+#
+#         # 3-2-6
+#         num1 = random.randint(0, 999)
+#         num2 = random.randint(0, 99)
+#         num3 = random.randint(0, 999999)
+#
+#         num1 = str(num1).zfill(3)      # 1 -> '1' -> '001'
+#         num2 = str(num2).zfill(2)      # 1 -> '1' -> '01'
+#         num3 = str(num3).zfill(6)      # 1 -> '1' -> '0000001'
+#         self.account_number = num1 + '-' + num2 + '-' + num3  # 001-01-000001
+#         Account.account_count +=1
+#
+#     @classmethod
+#     def get_account_num(cls):
+#         print(cls.account_count)     # Account.account_count
+#
+#
+# kim = Account("김민수", 100)
+# lee = Account("이민수", 100)
+# kim.get_account_num() # Account.get_account_num(kim)
 
 # 274 입금 메서드
 # Account 클래스에 입금을 위한 deposit 메서드를 추가하세요. 입금은 최소 1원 이상만 가능합니다.
@@ -751,3 +751,149 @@ import random
 # k.withdraw(100)
 # k.withdraw(200)
 # k.withdraw_history()
+
+# 281 클래스 정의
+# class 차:
+#     def __init__(self,바퀴,가격):
+#         self.바퀴 = 바퀴
+#         self.가격 = 가격
+#
+# car = 차(2,100)
+# print("----")
+# print(car.바퀴)
+# print(car.가격)
+
+# 282 클래스 상속
+# 차 클래스를 상속받은 자전차 클래스를 정의하세요.
+# class 차:
+#     def __init__(self,바퀴,가격):
+#         self.바퀴 = 바퀴
+#         self.가격 = 가격
+# class 자전차(차):
+#     pass
+
+# 283 클래스 상속
+# 다음 코드가 동작하도록 자전차 클래스를 정의하세요. 단 자전차 클래스는 차 클래스를 상속받습니다.
+# class 차:
+#     def __init__(self,바퀴,가격):
+#         self.바퀴 = 바퀴
+#         self.가격 = 가격
+# class 자전차(차):
+#     def __init__(self,바퀴,가격):
+#         self.바퀴 = 바퀴
+#         self.가격 = 가격
+#
+# bicycle = 자전차(2,100)
+# print(bicycle.가격)
+
+# 284 클래스 상속
+# 다음 코드가 동작하도록 자전차 클래스를 정의하세요. 단 자전차 클래스는 차 클래스를 상속받습니다.
+# class 차:
+#     def __init__(self,바퀴,가격):
+#         self.바퀴 = 바퀴
+#         self.가격 = 가격
+# class 자전차(차):
+#     def __init__(self,바퀴,가격,구동계):
+#         super().__init__(바퀴,가격)
+#         self.구동계 = 구동계
+# bicycle = 자전차(2,100,"시마노")
+# print(bicycle.구동계)
+# print(bicycle.바퀴)
+# # 클래스 상속
+# # 다음 코드가 동작하도록 차 클래스를 상속받는 자동차 클래스를 정의하세요.
+# class 차:
+#     def __init__(self,바퀴,가격):
+#         self.바퀴 = 바퀴
+#         self.가격 = 가격
+# class 자전차(차):
+#     def __init__(self,바퀴,가격,구동계):
+#         super().__init__(바퀴,가격)
+#         self.구동계 = 구동계
+# class 자동차(차):
+#     def __init__(self,바퀴,가격):
+#         super().__init__(바퀴,가격)
+#
+#     def 정보(self):
+#         print(f"바퀴수 : {self.바퀴}")
+#         print(f"가격 : {self.가격}")
+# car = 자동차(4,1000)
+# car.정보()
+# 부모 클래스 생성자 호출
+class 차:
+    def __init__(self,바퀴,가격):
+        self.바퀴 = 바퀴
+        self.가격 = 가격
+
+    def 정보(self):
+        print("바퀴수 : ", self.바퀴)
+        print("가격 : ", self.가격)
+class 자전차(차):
+    def __init__(self,바퀴,가격,구동계):
+        super().__init__(바퀴,가격)
+
+class 자동차(차):
+    def __init__(self,바퀴,가격):
+        super().__init__(바퀴,가격)
+
+    def 정보(self):
+        print(f"바퀴수 : {self.바퀴}")
+        print(f"가격 : {self.가격}")
+bicycle = 자전차(2,100,"시마노")
+bicycle.정보()
+
+# 287 부모 클래스 메서드 호출
+# 자전차의 정보() 메서드로 구동계 정보까지 출력하도록 수정해보세요.
+class 차:
+    def __init__(self, 바퀴, 가격):
+        self.바퀴 = 바퀴
+        self.가격 = 가격
+
+    def 정보(self):
+        print("바퀴수 ", self.바퀴)
+        print("가격 ", self.가격)
+
+class 자동차(차):
+    def __init__(self, 바퀴, 가격):
+        super().__init__(바퀴, 가격)
+
+class 자전차(차):
+    def __init__(self, 바퀴, 가격, 구동계):
+        super().__init__(바퀴, 가격)
+        self.구동계 = 구동계
+    def 정보(self):
+        super().정보
+        print("바퀴수 : ",self.구동계)
+bicycle = 자전차(2,100,"시마노")
+bicycle.정보()
+#288 메서드 오버라이딩
+class 부모:
+    def 호출(self):
+        print("부모호출")
+
+class 자식(부모):
+    def 호출(self):
+        print("자식호출")
+
+
+나 = 자식()
+나.호출()
+# 289 생성자
+class 부모:
+  def __init__(self):
+    print("부모생성")
+
+class 자식(부모):
+  def __init__(self):
+    print("자식생성")
+나 = 자식()
+# 290 부모클래스 생성자 호출
+class 부모:
+  def __init__(self):
+    print("부모생성")
+
+class 자식(부모):
+  def __init__(self):
+    print("자식생성")
+    super().__init__()
+
+나 = 자식()
