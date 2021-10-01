@@ -472,3 +472,163 @@ for i in range(10):
 #     f.write("life")
 
 
+###### 5장 파이썬 날개 달기 ######
+# Immutable (정수,실수,문자열,튜플) : 변하지 않는 자료형 call by value
+# a = 1
+# def vartest(a):
+#     a=a+1
+# vartest(a)
+# print(a)
+#
+# Mutable (리스트,딕셔너리,집합) : 변할 수 있는 자료형 call by 레퍼런스
+# b=[1,2,3]
+# def vartest2(b):
+#     b=b.append(4)
+# vartest2(b)
+# print(b)
+
+################## 클래스 ###############
+#반복되는 변수 & 메서드(함수)를 미리 정해놓은 틀(설계도)
+# class Calculator:
+#     def __init__(self):
+#         self.result =0
+#
+#     def add(self,num):
+#         self.result += num
+#         return self.result
+# cal1 = Calculator()
+# cal2 = Calculator()
+#
+# print(cal1.add(3))
+# print(cal1.add(4))
+# print(cal2.add(3))
+# print(cal2.add(7))
+# # 과자 틀(클래스) , 과자(객체)
+# class FourCal:
+#     def setdata(self,first,second):
+#         self.first = first
+#         self.second = second
+#
+# a = FourCal()
+# a.setdata(1,2)
+# print(a,type(a))
+# print(a.first)
+#
+# class FourCal:
+#     def __init__(self,first,second):
+#         self.first = first
+#         self.second = second
+#     def setdata(self,first,second):
+#         self.first = first
+#         self.second = second
+#     def add(self):
+#         result = self.first + self.second
+#         return result
+# a = FourCal() # 에러 기본생성자에 매개변수가 있어서, 매개변수가 필요함
+# a.setdata(4,2)
+# print(a.add())
+# __init __ 클래스 기본 생성자
+
+########## 상속
+# class FourCal:
+#     def __init__(self,first,second):
+#         self.first = first
+#         self.second = second
+#     def setdata(self,first,second):
+#         self.first = first
+#         self.second = second
+#     def add(self):
+#         result = self.first + self.second
+#         return result
+# class MoreFourCal(FourCal): # 상속 받은 자식 클래스
+#     def pow(selfself):
+#
+# a = MoreFourCal(4,2)
+# print(a.add())
+#
+# ##### 메서드 오버라이딩
+# class SafeFourCal(FourCal):
+#     def div(self):
+#         if self.second == 0:
+#             return 0
+#         else:
+#             return self.frist / self.second
+##### 클래스 변수, 객체 변수 ####
+class FourCal:
+    first = 2 # 클래스 변수
+    second = 3
+    def __init__(self,first,second):
+        self.first = first # 객체 변수
+        self.second = second
+    def setdata(self,first,second):
+        self.first = first
+        self.second = second
+    def add(self):
+        result = self.first + self.second
+        return result
+
+class Family:
+    lastname = "김"
+
+Family.lastname="박"
+print(Family.lastname)
+
+a = Family()
+b = Family()
+print(a.lastname)
+
+### 모듈이란? ###
+# 미리 만들어 놓은 .py 파일(함수,변수,클래스)
+# import sys
+# sys.path.append("파일주소")
+# import "대상"
+
+## 패키지란? ##
+# 모듈 여러 개 모아 놓은것
+
+## 예외 처리 ##
+# 오류가 발생했을때 어떻게 할지 정하는것
+# try:
+#     오류가 발생할 수 있는 구문
+# except Exception as e:
+#     오류 발생
+# else:
+#     오류 발생하지 않음
+# finally:
+#     무조건 마지막에 실행
+# f=open('foot.txt','w')
+# try :
+#     # 무언가를 수행
+#     data = f.read()
+#     print(data)
+# except Exception as e: # Exception 오류의 최상위(부모)
+#     print(e)
+# finally:
+#     f.close()
+
+### 내장함수 ###
+# 파이썬에서 기본적으로 포함하고 있는 함수 ex)print(), type()
+# print(abs(-3))
+# abs(절대값),all(모두 참인지 검사)
+def positive(x):
+    return x > 0
+a = list(filter(positive,[1,-3,2,0,-5,6]))
+print(a)
+
+### 외장함수 ###
+# 라이브러리 함수, import 해서 쓰는 것
+# import sys,time, webbrowser
+# print(sys.argv)
+# print(time.time())
+# for i in range(5):
+#     print(i)
+#     time.sleep(1)
+#     webbrowser.open("http://google.com")
+
+
+
+
+
+
+
+
