@@ -2,7 +2,9 @@ import sys
 
 option = sys.argv[1] # 입력
 memo = sys.argv[2] # 출력
+sdfsdf
 
+sdf
 if option == '-a':
     f = open('memo.txt','a')
     f.write(memo)
