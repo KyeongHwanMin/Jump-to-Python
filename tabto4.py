@@ -12,3 +12,4 @@ space_content = tab_content.replace("\t"," "*4)
 f = open(dst, 'w')
 f.write(space_content)
 f.close()
+
