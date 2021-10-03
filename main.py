@@ -626,6 +626,48 @@ print(a)
 #     webbrowser.open("http://google.com")
 
 
+##### 6강 파이썬 프로그래밍 ####
+# 프로그램을 만들렴년 가장 먼저 '입력' 과 '출력'을 생각하라.
+# 구구단 함수 만들기
+def GuGu(n):
+    result = []
+    i = 1
+    while i < 10:
+        result.append(n * i)
+        i = i + 1
+    return result
+result = GuGu(2)
+print(GuGu(2))
+
+# 3과 5의 배수 합하기
+# 10 미만의 자연수에서 3과 5의 배수를 구하면 3,5,6,9, 이다.
+# 이들의 총합은 23이다. 1000 미만의 자연수에서 3의 배수와 5의 배수의 총합을 구하라.
+n = 1
+result = 0
+for n in range(1,1000):
+    if n % 3 == 0 or n % 5 == 0:
+        result +=n
+print(result)
+
+# 게시판 페이징하기
+# 게시물의 총 건수와 한 페이지에 보여줄 게시물수를 입력으로 주었을 때 총 페이지수를 출력하는 프로그램
+def getTotalPage(m,n):
+    if m % n == 0:
+        return m // n
+    else:
+        return m // n + 1
+
+# 간단한 메모장 만들기
+#원하는 메모를 파일에 저장하고 추가 및 조회가 가능한 간단한 메모장을 만들어보자.
+#memo.py
+# 탭을 4개의 공백으로 바꾸기
+#tabto4.py
+#하위 디렉터리 검색하기
+# 특정 디렉터리부터 시작해서 그 하위 모든파일 중 파이썬 파일(*.py)만 출력해 주는 프로그램 만들기
+
+
+
+
 
 
 
