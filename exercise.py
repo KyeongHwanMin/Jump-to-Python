@@ -6,16 +6,29 @@
 # 다운로드 속도가 초당 800kB이고 다운로드하는 데 걸린 시간이 110초라고 할 때, 다운로드한 파일의 크기는 몇 MB일까요?
 # 단, 1MB = 1000kB 로 계산합니다.
 
-average_rage = 800
-time = 110
-
-down = average_rage * time / 1000
-print(down)
+# average_rage = 800
+# time = 110
+#
+# down = average_rage * time / 1000
+# print(down)
 
 # 1.6.1 연습 문제: 제곱
 # 문제
 # 사용자에게 정수를 입력받아, 그 수의 제곱을 계산해 출력하는 파이썬 스크립트를 작성하세요.
 
-print("정수를 입력 하시오. : ")
-num = int(input())
-print(num * num)
+# print("정수를 입력 하시오. : ")
+# num = int(input())
+# print(num * num)
+
+# 2.1.1 연습 문제: 입력받은 숫자만큼 반복하기(while)
+# 문제
+# input()으로 사용자로부터 정수를 한 개 입력받아, 그 숫자를 숫자 크기만큼 반복해서 출력하는 파이썬 스크립트를 작성하세요.
+# 이때 출력 앞에 공백을 한 칸 주어서, 입력과 출력이 구분되게 합니다.
+# 단, while 문을 사용하세요.
+
+# print("정수를 입력 하시오. : " )
+# num = int(input())
+# i = 0
+# while i < num:
+#     print('',num)
+#     i += 1
