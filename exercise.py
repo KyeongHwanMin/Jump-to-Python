@@ -11,3 +11,11 @@ time = 110
 
 down = average_rage * time / 1000
 print(down)
+
+# 1.6.1 연습 문제: 제곱
+# 문제
+# 사용자에게 정수를 입력받아, 그 수의 제곱을 계산해 출력하는 파이썬 스크립트를 작성하세요.
+
+print("정수를 입력 하시오. : ")
+num = int(input())
+print(num * num)
